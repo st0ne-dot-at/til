@@ -1,6 +1,6 @@
 # til
 
-## 12.2.2016 snoop lacep
+## 12.2.2016 snoop lacp
 
     tcpdump -i eth0 -c1 -s0 -vvv ether dst host 01:80:c2:00:00:02
 
