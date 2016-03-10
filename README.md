@@ -1,4 +1,8 @@
 # til
+#
+## 10.3.2016 see what a rpm provides
+
+    rpm -q --provides openpgm-5.2.122-2.el6.x86_64
 
 ## 19.2.2016 journalctl show logs per unit
 
