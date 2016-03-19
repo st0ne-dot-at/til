@@ -1,5 +1,9 @@
 # til
-#
+
+## 29.3.2016 paste in vim
+    :set noautoindent
+    :set paste
+
 ## 10.3.2016 see what a rpm provides
 
     rpm -q --provides openpgm-5.2.122-2.el6.x86_64
