@@ -1,6 +1,18 @@
 # til
+## 22.3.2016 reload udev rules
+
+    udevadm control --reload-rules
+
+## 22.3.2016 udev trigger script on usb storage insert
+
+    KERNEL=="sd?1", SUBSYSTEMS=="usb", DRIVERS=="usb-storage", ACTION=="add", RUN+="/woswasi.sh"
+
+## 22.3.2016 get udev information of device
+
+    udevadm info -a /dev/sdb1
 
 ## 29.3.2016 paste in vim
+
     :set noautoindent
     :set paste
 
