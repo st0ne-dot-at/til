@@ -1,4 +1,8 @@
 # til
+## 9.4.2016 ping scan with nmap
+
+    nmap -sn 10.0.1.0/24
+
 ## 22.3.2016 reload udev rules
 
     udevadm control --reload-rules
