@@ -1,4 +1,10 @@
 # til
+## 20.4.2016 get apk from android device
+
+    adb shell pm list packages
+    adb shell pm path com.example.someapp
+    adb pull /data/app/com.example.someapp-2.apk
+    
 ## 9.4.2016 ping scan with nmap
 
     nmap -sn 10.0.1.0/24
