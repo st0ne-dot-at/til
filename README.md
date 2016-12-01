@@ -1,4 +1,8 @@
 # til
+## 1.12.2016 xargs echo server
+
+    nc -l -u 9999 -k -c 'xargs -n1 echo'
+
 ## 20.4.2016 get apk from android device
 
     adb shell pm list packages
