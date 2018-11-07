@@ -62,3 +62,14 @@
 ## 11.2.2016 change keyboard layout on console
 
     localectl set-keymap --no-convert keymap us
+
+## 7.11.2018 auto start vpn with NetworkManager
+
+    #!/bin/bash
+    #file: /etc/NetworkManger/dispatcher.d/30-autovpn.sh
+    vpn_name='vpn'
+    parent_dev='enp0s25'
+    
+    if [ "$1" == $parent_dev -a "$2" == 'up' ]; then
+        nmcli connection up $vpn_name
+    fi
