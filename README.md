@@ -78,3 +78,7 @@
 
     nmcli connection modify vpn +ipv4.routes 140.82.118.3/32
     nmcli connection modify vpn +ipv4.routes 140.82.118.4/32
+
+## 7.11.2018 chrome reload proxy.pac file
+
+    chrome://net-internals/#proxy -> Proxy -> Re-apply settings
