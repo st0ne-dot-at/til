@@ -73,3 +73,8 @@
     if [ "$1" == $parent_dev -a "$2" == 'up' ]; then
         nmcli connection up $vpn_name
     fi
+
+## 7.11.2018 add github routes to vpn connection 
+
+    nmcli connection modify vpn +ipv4.routes 140.82.118.3/32
+    nmcli connection modify vpn +ipv4.routes 140.82.118.4/32
