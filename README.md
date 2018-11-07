@@ -67,11 +67,12 @@
 
     #!/bin/bash
     #file: /etc/NetworkManger/dispatcher.d/30-autovpn.sh
-    vpn_name='vpn'
-    parent_dev='enp0s25'
-    
-    if [ "$1" == $parent_dev -a "$2" == 'up' ]; then
-        nmcli connection up $vpn_name
+    vpn_name='myvpn'
+
+    if ping  -c 1 www.google.at >/dev/null 2>&1; then
+        if ! nmcli connection show --active | grep "^${vpn_name}.*" >/dev/null 2>&1; then
+            nmcli connection up ${vpn_name}
+        fi
     fi
 
 ## 7.11.2018 add github routes to vpn connection 
