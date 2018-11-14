@@ -83,3 +83,11 @@
 ## 7.11.2018 chrome reload proxy.pac file
 
     chrome://net-internals/#proxy -> Proxy -> Re-apply settings
+
+## 8.11.2018 pstree back to init
+
+    pstree -sp $$
+
+## 14.11.2018 excract rpm content
+
+    rpm2cpio myrpmfile.rpm | cpio -idmv
