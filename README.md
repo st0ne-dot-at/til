@@ -91,3 +91,11 @@
 ## 14.11.2018 excract rpm content
 
     rpm2cpio myrpmfile.rpm | cpio -idmv
+
+## 30.11.2018 git remove local branch
+
+    git branch -d dev
+
+## 30.11.2018 git remove remote branch
+
+    git push --delete origin dev
