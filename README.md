@@ -99,3 +99,7 @@
 ## 30.11.2018 git remove remote branch
 
     git push --delete origin dev
+
+## 12.12.2018 bash check string length
+
+    [ -z "${test}" ] && echo 'not zero length'
