@@ -103,3 +103,7 @@
 ## 12.12.2018 bash check string length
 
     [ -z "${test}" ] && echo 'not zero length'
+
+## 13.12.2018 git diff file between branches
+
+    git diff branch-a..branch-b  -- <file_to_diff>
