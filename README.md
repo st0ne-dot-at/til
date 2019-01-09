@@ -107,3 +107,7 @@
 ## 13.12.2018 git diff file between branches
 
     git diff branch-a..branch-b  -- <file_to_diff>
+
+## 9.1.2019 posgres csv export
+
+    \copy (SELECT * FROM persons) to '/tmp/persons_client.csv' with csv
