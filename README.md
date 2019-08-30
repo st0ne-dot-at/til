@@ -108,6 +108,13 @@
 
     git diff branch-a..branch-b  -- <file_to_diff>
 
-## 9.1.2019 posgres csv export
+## 9.1.2019 postgres csv export
 
     \copy (SELECT * FROM persons) to '/tmp/persons_client.csv' with csv
+
+## 30.8.2019 python read file line by line
+
+    filepath = 'file.txt'
+    with open(filepath) as f:
+        for cnt, line in enumerate(f):
+            print("Line {}: {}".format(cnt, line))
