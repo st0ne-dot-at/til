@@ -112,7 +112,7 @@
 
     \copy (SELECT * FROM persons) to '/tmp/persons_client.csv' with csv
 
-## 30.8.2019 python read file line by line
+## 30.8.2019 pythonic read file line by line
 
     filepath = 'file.txt'
     with open(filepath) as f:
