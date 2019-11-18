@@ -118,3 +118,7 @@
     with open(filepath) as f:
         for cnt, line in enumerate(f):
             print("Line {}: {}".format(cnt, line))
+
+## 18.11.2019 rpm download only with dependencies
+
+    yumdownloader --destdir . --resolve varnish.x86_64
