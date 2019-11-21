@@ -125,7 +125,7 @@
 
 ## 18.11.2019 bash
 
-    =#default value=
+    #default value
     $ echo ${not_set_var:-default_value}
     default_value
 
@@ -135,3 +135,25 @@
     $ echo $not_set_var 
     default_value
 
+    #error on if unset
+    $ echo ${not_set_var:?var is not set}
+    -bash: not_set_var: var is not set
+
+    #alternate value
+    $ x=9999
+    $ echo ${x:+1}
+    1
+
+    #substring
+    $ x='abcdefg'
+    $ echo ${x:1}
+    bcdefg
+    $ echo ${x:1:3}
+    bcd
+
+    #array
+    $ x=(a b c d)
+    $ echo ${x[*]}  # values
+    a b c d
+    $ echo ${!x[*]} # indexes
+    0 1 2 3
