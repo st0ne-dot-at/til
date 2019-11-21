@@ -123,7 +123,7 @@
 
     yumdownloader --destdir . --resolve varnish.x86_64
 
-## 18.11.2019 bash
+## 21.11.2019 bash
 
     #default value
     $ echo ${not_set_var:-default_value}
@@ -157,3 +157,44 @@
     a b c d
     $ echo ${!x[*]} # indexes
     0 1 2 3
+    $ echo ${#array[*]} #size
+    4
+
+    #variable lenth
+    $ x='a234'
+    $ echo ${#x}
+    4
+
+    #remove prefix pattern
+    $ x='P1234_99'
+    $ echo ${x#P*_}
+    99
+
+    #remove suffix pattern
+    $ x='nix_1asdf.txt'
+    $ echo echo ${x%_*.txt}
+    nix
+
+    #substitute
+    $ x='nix_1asdf.txt'
+    $ echo ${x/nix/qwert}
+    qwert_1asdf.txt
+    $ echo ${x/1*/qwert}
+    nix_qwert
+
+    #modify case
+    $ x=st0nE
+    $ echo ${x^}
+    St0nE
+    $ echo ${x^^}
+    ST0NE
+    $ echo ${x,}
+    st0nE
+    $ echo ${x,,}
+    st0ne
+
+    #arithmetic
+    $ x=1
+    $ echo $((${x}+2))
+    3
+
