@@ -125,7 +125,7 @@
 
 ## 18.11.2019 bash
 
-    #default value
+    *#default value*
     $ echo ${not_set_var:-default_value}
     default_value
 
