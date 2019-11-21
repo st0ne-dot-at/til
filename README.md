@@ -122,3 +122,16 @@
 ## 18.11.2019 rpm download only with dependencies
 
     yumdownloader --destdir . --resolve varnish.x86_64
+
+## 18.11.2019 bash
+
+    #default value
+    $ echo ${not_set_var:-default_value}
+    default_value
+
+    #default value + set var
+    $ echo ${not_set_var:=default_value}
+    default_value
+    $ echo $not_set_var 
+    default_value
+
