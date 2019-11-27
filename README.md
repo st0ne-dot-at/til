@@ -198,3 +198,11 @@
     $ echo $((${x}+2))
     3
 
+## 22.11.2019 list namespaces
+
+    lsns
+
+
+## 27.11.2019 find processes using swap
+
+    grep -i vmswap /proc/*/status | sort -n -k2
