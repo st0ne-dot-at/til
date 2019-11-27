@@ -206,3 +206,8 @@
 ## 27.11.2019 find processes using swap
 
     grep -i vmswap /proc/*/status | sort -n -k2
+
+## 27.11.2019 journald recover disk space
+
+    journalctl --disk-usage
+    journalctl --vacuum-size=10M
