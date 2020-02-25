@@ -172,7 +172,7 @@
 
     #remove suffix pattern
     $ x='nix_1asdf.txt'
-    $ echo echo ${x%_*.txt}
+    $ echo ${x%_*.txt}
     nix
 
     #substitute
@@ -211,3 +211,11 @@
 
     journalctl --disk-usage
     journalctl --vacuum-size=10M
+
+## 25.2.2020 socat multicast
+
+    # send multicast
+    echo "from: $(hostname)" | socat STDIO UDP4-DATAGRAM:239.255.200.192:4131,ip-multicast-ttl=8
+    # receive multicast ... replace IPADDRESS
+    socat UDP4-RECVFROM:4131,ip-add-membership=239.255.200.192:<IPADDRESS>,fork,reuseaddr -
+    
