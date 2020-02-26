@@ -216,6 +216,5 @@
 
     # send multicast
     echo "from: $(hostname)" | socat STDIO UDP4-DATAGRAM:239.255.200.192:4131,ip-multicast-ttl=8
-    # receive multicast ... replace IPADDRESS
-    socat UDP4-RECVFROM:4131,ip-add-membership=239.255.200.192:<IPADDRESS>,fork,reuseaddr -
-    
+    # receive multicast
+    socat UDP4-RECVFROM:4131,ip-add-membership=239.255.200.192:$(ip route get 8.8.8.8 | head -n1 | awk '{print $7}'),fork,reuseaddr - 
