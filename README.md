@@ -218,3 +218,16 @@
     echo "from: $(hostname)" | socat STDIO UDP4-DATAGRAM:239.255.200.192:4131,ip-multicast-ttl=8
     # receive multicast
     socat UDP4-RECVFROM:4131,ip-add-membership=239.255.200.192:$(ip route get 8.8.8.8 | head -n1 | awk '{print $7}'),fork,reuseaddr - 
+
+## 16.9.2020 control Sony Android TV with curl
+    # get methods
+    curl -X POST http://10.0.1.218/sony/system -H "X-Auth-PSK: 1234" -d '{"id": 20, "method": "getMethodTypes", "version": "1.0", "params": [""]}' 
+    curl -X POST http://10.0.1.218/sony/appControl -H "X-Auth-PSK: 1234" -d '{"id": 20, "method": "getMethodTypes", "version": "1.0", "params": [""]}' 
+    # power off
+    curl -X POST http://10.0.1.218/sony/system -H "X-Auth-PSK: 1234" -d '{"id": 20, "method": "setPowerStatus", "version": "1.0", "params": [{"status": false}]}'
+    # power on
+    curl -X POST http://10.0.1.218/sony/system -H "X-Auth-PSK: 1234" -d '{"id": 20, "method": "setPowerStatus", "version": "1.0", "params": [{"status": true}]}'
+    # start netflix
+    curl -X POST http://10.0.1.218/sony/appControl -H "X-Auth-PSK: 1234" -d '{"id": 20, "method": "setActiveApp", "version": "1.0", "params": [{"uri": "com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity"}]}'
+
+
