@@ -230,4 +230,6 @@
     # start netflix
     curl -X POST http://10.0.1.218/sony/appControl -H "X-Auth-PSK: 1234" -d '{"id": 20, "method": "setActiveApp", "version": "1.0", "params": [{"uri": "com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity"}]}'
 
-
+## 22.10.2020 compile shell script to c
+   check out https://github.com/neurobin/shc
+   
