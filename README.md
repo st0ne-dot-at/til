@@ -233,3 +233,6 @@
 ## 22.10.2020 compile shell script to c
    check out https://github.com/neurobin/shc
    
+## 22.10.2020 source local .sshrc profile file on remote
+   check out https://github.com/danrabinowitz/sshrc 
+   
