@@ -240,7 +240,7 @@
 
     # delete all interface on linux machine
     # add bond interface
-    nmcli connection add type bond con-name bond ifname bond mode 802.3ad ipv4.addresses 10.0.1.106/24 ipv4.gateway 10.0.1.1 ipv4.dns 10.0.1.1 bond.options mode=802.3ad,miimon=100,lacp_rate=fast,xmit_hash_policy=layer2+3
+    nmcli connection add type bond con-name bond ifname bond mode 802.3ad ipv4.addresses 10.0.1.106/24 ipv4.gateway 10.0.1.1 ipv4.dns 10.0.1.1 bond.options mode=802.3ad,miimon=100,lacp_rate=fast,xmit_hash_policy=layer2+3 ipv4.method manual
     
     # add slave interfaces
     nmcli connection  add type  bond-slave ifname enp0s20f0u6 con-name <slave-ineterface-1> master bond
